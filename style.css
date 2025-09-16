@@ -1,0 +1,153 @@
+/* style.css */
+
+:root {
+  --primary: #007bff;
+  --bg: #f9f9f9;
+  --text: #333;
+  --card: #ffffff;
+  --border: #e0e0e0;
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--card);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px var(--shadow);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 14px 20px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result-box {
+  margin-top: 20px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+#resultat {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007bff;
+  min-height: 32px; /* fixe une hauteur minimale */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#resultat {
+  transition: all 0.3s ease;
+}
+
+.copy-btn {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.copy-btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.history {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.history h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+ul#historique {
+  list-style: none;
+  padding: 0;
+  max-height: 200px; /* fixe une hauteur */
+  overflow-y: auto;  /* active le scroll si nécessaire */
+  margin-top: 10px;
+}
+
+ul#historique li {
+  background-color: #fefefe;
+  padding: 10px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+ul#historique li:hover {
+  transform: scale(1.02);
+}
+
+ul#historique li.copiable {
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+ul#historique li.copiable:hover {
+  background-color: #e0f0ff;
+}
+
+ul#historique li.copied {
+  background-color: #cce5ff;
+  font-weight: bold;
+}

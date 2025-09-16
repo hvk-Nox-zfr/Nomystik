@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Générateur de prénoms Fantasy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Générateur de prénoms Fantasy</h1>
+    <p class="subtitle">Crée des noms uniques pour tes mondes imaginaires</p>
+
+    <div class="input-group">
+      <input type="text" id="baseInput" placeholder="Entrez une idée (ex: feu, elfe, ombre)" />
+      <button onclick="genererNom()">Générer</button>
+    </div>
+
+    <div class="result-box">
+      <p id="resultat">Ton nom apparaîtra ici</p>
+      <button class="copy-btn" onclick="copierNom()">📋 Copier</button>
+    </div>
+
+    <section class="history">
+      <h2>Historique</h2>
+      <ul id="historique"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
